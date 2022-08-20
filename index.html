@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB TIN HỌC</title>
+    <link rel="stylesheet" href="index2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link rel="shortcut icon" href="sup_tool.webp" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="index2.js"></script>
+    </head>
+    <body onload="timeTable(),changeImg(),scrollTool(),onBlur(),changeH1()">
+        <div id="clock">
+            <div>
+                <h1 id="time_table"></h1>
+            </div>
+        </div>
+            <!-- Search BTN -->
+            <div id="search_section">
+                <input type="text" name="search_btn" id="search_btn" placeholder="Nhập tìm kiếm ở đây"> <i class="fa-solid fa-magnifying-glass"></i>
+                <ul id="search_result">
+
+                </ul>
+                
+            </div>
+                
+                <div id="margin_item"></div>
+
+        <!-- Header -->
+        <div id="header">
+            <ul class="menu_header">
+                <li><a href="#">Home <i class="fa-solid fa-house-laptop"></i></a></li>
+                <li><a href="#">Giới thiệu <i class="fa-solid fa-book-bookmark"></i></a></li>
+                <li><a href="#" id="forum_btn">Diễn đàn <i class="fa-solid fa-users"></i></a></li>
+                <li><a href="#" id="branch_btn">Trụ sở <i class="fa-solid fa-bullhorn"></i></a></li>
+            </ul>
+        </div>
+
+        <div id="margin_item"></div>
+
+        <!-- Introduction -->
+        <div id="intro">
+            <ul class="tab">
+                <li><a href="#html_content" class="active">CNTT</a></li>
+                <li><a href="#css_content">REVIEW</a></li>
+                <li><a href="#jvs_content">JOBS</a></li>
+                <li><a href="#jquery_content">IPA</a></li>
+            </ul>
+        </div>
+        <div class="tab_content active">
+            <h1 id="html_content">
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-book"></i> Số chủ đề: 3,124</a></li>
+                    <li><a href="#"><i class="fa-solid fa-list"></i> Số bài viết: 5,052</a></li>
+                    <li><a href="#"><i class="fa-solid fa-pen-to-square"></i> Bài viết cuối cùng: Các công nghệ hiện đại</a></li>
+                    <li>Credit: <a href="#">iam_Zzu</a></li>
+                    <li>Date: 03-12-2021, 20:48</li>
+                </ul>
+            </h1>
+            <h1 id="css_content"><ul>
+                <li><a href="#"><i class="fa-solid fa-book"></i> Số chủ đề: 5,135</a></li>
+                <li><a href="#"><i class="fa-solid fa-list"></i> Số bài viết: 10,140</a></li>
+                <li><a href="#"><i class="fa-solid fa-pen-to-square"></i> Bài viết cuối cùng: Sản phẩm điện tử giá tốt</a></li>
+                <li>Credit: <a href="#">SonTunqMtp</a></li>
+                <li>Date: 05-11-2022, 20:48</li>
+            </ul></h1>
+            <h1 id="jvs_content"><ul>
+                <li><a href="#"><i class="fa-solid fa-book"></i> Số chủ đề: 7,211</a></li>
+                <li><a href="#"><i class="fa-solid fa-list"></i> Số bài viết: 11,132</a></li>
+                <li><a href="#"><i class="fa-solid fa-pen-to-square"></i> Bài viết cuối cùng: Tìm kế toán cho công ty XYZ</a></li>
+                <li>Credit: <a href="#">jAck_5triu.</a></li>
+                <li>Date: 13-11-2022, 20:48</li>
+            </ul></h1>
+            <h1 id="jquery_content"><ul>
+                <li><a href="#"><i class="fa-solid fa-book"></i> Số chủ đề: 1,913</a></li>
+                <li><a href="#"><i class="fa-solid fa-list"></i> Số bài viết: 4,052</a></li>
+                <li><a href="#"><i class="fa-solid fa-pen-to-square"></i> Bài viết cuối cùng: Các thư viện chuyên dụng của Python</a></li>
+                <li>Credit: <a href="#">jOker</a></li>
+                <li>Date: 02-10-2020, 20:48</li>
+            </ul></h1>
+        </div>
+
+        <div id="margin_item"></div>
+
+
+        <!-- Notification -->
+        <div class="notice">
+            <div class="note note_heading">
+                <h2 class="animate__animated animate__bounce">Các quy định của diễn đàn</h2>
+            </div>
+            <ul class="note note_content">
+                <li class="animate__animated animate__pulse"><span >Không nói tục, thiếu văn hoá <i class="fa-solid fa-x"></i></span></li>
+                <li class="animate__animated animate__pulse"><span >Chia sẻ nội dung bổ ích <i class="fa-solid fa-check"></i></span></li>
+                <li class="animate__animated animate__pulse"><span >Không Spam <i class="fa-solid fa-x"></i></span></li>
+            </ul>
+        </div>
+
+        <div id="margin_item"></div>
+        <!-- Slider -->
+
+        <div id="slider">
+            <div class="slider_picture">
+                <img src="street1.png" id="pic_slider" alt="hình nền bình minh">
+            </div>
+        </div>
+
+        <!-- Scroll tool -->
+        <div id="scroll_tool">
+            <a class="fa-solid fa-arrow-up" href="#"></a>
+        </div>
+
+        <div id="margin_item"></div>
+        <!-- Forum -->
+        <div id="forum">
+            <ul class="forum heading">
+                <li class="cl0"></li>
+                <li class="cl1"><span>Chuyên mục</span></li>
+                <li class="cl2"><span>Bài viết</span></li>
+                <li class="cl3"><span>Số chủ đề</span></li>
+                <li class="cl4"><span>Số bài viết</span></li>
+            </ul>
+            <ul class="forum_status " id="forum_status_1">
+                <li>
+                    <ul class="forum header tab_1  cnt_stt">
+                        <li>Hoạt động của diễn đàn thảo luận <i class="fa-solid fa-bars-progress"></i></li>
+                        <li><i class="fa-solid fa-circle-minus" rel="1" ></i></li>
+                    </ul>
+                </li>
+                <div class="content_table content_table_1">
+                <li>
+                    <ul class="forum column_content r1">
+                        <li class="cl0"><i class="fa-solid fa-message"></i></li>
+                        <li class="cl1 ">Hoạt động Off-line
+                            <div class="mini_note">
+                            <a href="#"><i class="fa-solid fa-comment"></i> Cuộc thi dành cho tinhoc123</a>
+                            <a href="#"><i class="fa-solid fa-comment"></i> Sinh nhật tinhoc123</a>
+                            </div>
+                        </li>
+                        <li class="cl2"><a href="#" title="Xem bài viết mới trong chủ đề 'Các phần quà của nhà tài trợ FPT'">Các phần quà tặng của nhà tài trợ</a>
+                            <div class="mini_note_2">    
+                            <p>by <a href="#">Daniel_Cow</a></p>
+                            <p>03-12-2021, 20:48</p>
+                            </div>
+                        </li>
+                        <li class="cl3">255</li>
+                        <li class="cl4">10,384</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="forum column_content r2">
+                        <li class="cl0"><i class="fa-solid fa-message"></i></li>
+                        <li class="cl1">Công tác xã hội
+                            <div class="mini_note">
+                                <a href="#"><i class="fa-solid fa-comment"></i> Tin học xanh</a>
+                                <a href="#"><i class="fa-solid fa-comment"></i> Nhật kí tin học xanh</a>
+                            </div>
+                        </li>
+                        <li class="cl2"><a href="#" title="Xem bài viết mới trong chủ đề 'Công ty ABC tổ chức hiến máu cho công nhân'">Công ty ABC tổ chức hiến máu</a>
+                            <div class="mini_note_2">    
+                                <p>by <a href="#">iam_Zzu</a></p>
+                                <p>23-06-2022, 15:35</p>
+                                </div> 
+                        </li>
+                        <li class="cl3">116 </li>
+                        <li class="cl4">5,868</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="forum column_content r3">
+                        <li class="cl0"><i class="fa-solid fa-message"></i></li>
+                        <li class="cl1">Thông báo
+                            <div class="mini_note">
+                                <a href="#"><i class="fa-solid fa-comment"></i> Thông báo cũ</a>
+                                <a href="#"><i class="fa-solid fa-comment"></i> Góp ý</a>
+                                <a href="#"><i class="fa-solid fa-comment"></i> Vi phạm</a>
+                            </div>
+                        </li>
+                        <li class="cl2"><a href="#" title="Xem bài viết mới trong chủ đề 'Góp ý mới, lỗi bảo trì diễn đàn'">Góp ý mới, lỗi bảo trì</a>
+                            <div class="mini_note_2">    
+                                <p>by <a href="#">duongvy415</a></p>
+                                <p>24-09-2021, 18:19</p>
+                                </div> </li>
+                        <li class="cl3">124</li>
+                        <li class="cl4">1,213</li>
+                    </ul>
+                </li>
+                </div> 
+            </ul>
+            
+            <br>
+
+            <ul class="forum_status " id="forum_status_2">
+                <li>
+                    <ul class="forum header tab_2  cnt_stt">
+                        <li>Thảo luận chung <i class="fa-solid fa-user-group"></i></li>
+                        <li><i class="fa-solid fa-circle-minus" rel="2"></i></li>
+                    </ul>
+                </li>
+                <div class="content_table content_table_2">
+                <li>
+                    <ul class="forum column_content r1">
+                        <li class="cl0"><i class="fa-solid fa-message"></i></li>
+                        <li class="cl1">CNTT Việt Nam và Quốc tế
+                            <div class="mini_note">
+                                <a href="#"><i class="fa-solid fa-comment"></i> Các cuộc thi quốc tế</a>
+                                </div>
+                        </li>
+                        <li class="cl2"><a href="#" title="Xem bài viết mới trong chủ đề 'Tìm chuyên gia về lập trình ứng dụng có nhiều năm kinh nghiệm'">Tìm chuyên gia về lập trình và ứng dụng</a>
+                            <div class="mini_note_2">    
+                                <p>by <a href="#">phanthang1020</a></p>
+                                <p>27-07-2022, 11:05</p>
+                                </div> </li>
+                        <li class="cl3">3,685</li>
+                        <li class="cl4">13,831</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="forum column_content r2">
+                        <li class="cl0"><i class="fa-solid fa-message"></i></li>
+                        <li class="cl1">Tin tức CNTT
+                            <div class="mini_note">
+                                <a href="#"><i class="fa-solid fa-comment"></i> Tin PR & Khuyến mãi</a>
+                                </div>
+                        </li>
+                        <li class="cl2"><a href="#" title="Xem bài viết mới trong chủ đề 'Seasonic conect- bộ nguồn quẳng gánh lo đi dây'">Seasonic connect</a>
+                            <div class="mini_note_2">    
+                                <p>by <a href="#">chg_0209</a></p>
+                                <p>11-07-2019, 20:15</p>
+                                </div> </li>
+                        <li class="cl3">1,215 </li>
+                        <li class="cl4">9,291</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="forum column_content r3">
+                        <li class="cl0"><i class="fa-solid fa-message"></i></li>
+                        <li class="cl1">Nghề nghiệp
+                            <div class="mini_note">
+                                <a href="#"><i class="fa-solid fa-comment"></i> Tư vấn pháp luật</a>
+                                </div>
+                        </li>
+                        <li class="cl2"><a href="#"  title="Xem bài viết mới trong chủ đề 'Tuyển nhân viên nhập liệu cho công ty XYZ'">Tuyển gấp nhân viên nhập liệu</a>
+                            <div class="mini_note_2">    
+                                <p>by <a href="#">lth_1311</a></p>
+                                <p>13-11-2003, 09:13</p>
+                                </div> 
+                            </li>
+                        <li class="cl3">4,160</li>
+                        <li class="cl4">6,109</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="forum column_content r4">
+                        <li class="cl0"><i class="fa-solid fa-message"></i></li>
+                        <li class="cl1">Review sản phẩm
+                            <div class="mini_note">
+                                <a href="#"><i class="fa-solid fa-comment"></i> Laptop MSI, <i class="fa-solid fa-comment"></i> Laptop DELL</a>
+                            </div>
+                        </li>
+                        <li class="cl2"><a href="#" title="Xem bài viết mới trong chủ đề 'Các mặt hàng của Apple và Panasonic'">Các mặt hàng Apple và Panasonic</a>
+                            <div class="mini_note_2">    
+                                <p>by <a href="#">hj_whis</a></p>
+                                <p>02-10-2003, 00:24</p>
+                                </div> </li>
+                        <li class="cl3">2,380</li>
+                        <li class="cl4">7,281</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="forum column_content r5">
+                        <li class="cl0"><i class="fa-solid fa-message"></i></li>
+                        <li class="cl1">Start-up khởi nghiệp</li>
+                        <li class="cl2"><a href="#" title="Xem bài viết mới trong chủ đề 'Bạn có muốn khởi nghiệp'">Bạn có muốn khởi nghiệp?</a>
+                            <div class="mini_note_2">    
+                                <p>by <a href="#">cotuel_z</a></p>
+                                <p>21-04-2018, 15:35</p>
+                                </div> </li>
+                        <li class="cl3">1,012</li>
+                        <li class="cl4">11,109</li>
+                    </ul>
+                </li>
+                </div> 
+            </ul>
+
+            <br>
+
+            <ul class="forum_status " id="forum_status_3">
+                <li>
+                    <ul class="forum header tab_3  cnt_stt">
+                        <li>Đào tạo <i class="fa-solid fa-pencil"></i></li>
+                        <li><i class="fa-solid fa-circle-minus" rel="3"></i></li>
+                    </ul>
+                </li>
+                <div class="content_table content_table_3">
+                <li>
+                    <ul class="forum column_content r1">
+                        <li class="cl0"><i class="fa-solid fa-message"></i></li>
+                        <li class="cl1">Công nghệ giáo dục</li>
+                        <li class="cl2"><a href="#" title="Xem bài viết mới trong chủ đề 'Điểm khác biệt giữa các ngành khoa học dữ liệu'">Điểm khác biệt giữa các ngành khoa học dữ liệu</a>
+                            <div class="mini_note_2">    
+                                <p>by <a href="#">ielz_cosz</a></p>
+                                <p>12-02-2022, 14:32</p>
+                                </div> </li>
+                        <li class="cl3">102</li>
+                        <li class="cl4">2,384</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="forum column_content r2">
+                        <li class="cl0"><i class="fa-solid fa-message"></i></li>
+                        <li class="cl1">Học về CNTT</li>
+                        <li class="cl2"><a href="#" title="Xem bài viết mới trong chủ đề 'Tổng hợp các loại tạp chí Computer'">Tổng hợp các loại tạp chí Computer</a>
+                            <div class="mini_note_2">    
+                                <p>by <a href="#">q_T</a></p>
+                                <p>13-08-2021, 18:00</p>
+                                </div> </li>
+                        <li class="cl3">255 </li>
+                        <li class="cl4">4,268</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="forum column_content r3">
+                        <li class="cl0"><i class="fa-solid fa-message"></i></li>
+                        <li class="cl1">Chứng chỉ tin học
+                            <div class="mini_note">
+                                <a href="#"><i class="fa-solid fa-comment"></i> Chứng chỉ MOS, <i class="fa-solid fa-comment"></i> Chứng chỉ FE</a>
+                                </div>
+                        </li>
+                        <li class="cl2"><a href="#" title="Xem bài viết mới trong chủ đề 'Hỏi về chứng chỉ tin học'">Hỏi về chứng chỉ tin học</a>
+                            <div class="mini_note_2">    
+                                <p>by <a href="#">dooki</a></p>
+                                <p>01-08-2021, 15:23</p>
+                                </div> </li>
+                        <li class="cl3">561</li>
+                        <li class="cl4">10,013</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="forum column_content r4">
+                        <li class="cl0"><i class="fa-solid fa-message"></i></li>
+                        <li class="cl1">English Room
+                            <div class="mini_note">
+                                <a href="#"><i class="fa-solid fa-comment"></i> TOEIC</a>
+                                <a href="#"><i class="fa-solid fa-comment"></i> IELTS</a>
+                            </div>
+                        </li>
+                        <li class="cl2"><a href="#" title="Xem bài viết mới trong chủ đề 'Góp ý mới, lỗi bảo trì diễn đàn'">Tìm địa điểm học AV giao tiếp</a>
+                            <div class="mini_note_2">    
+                                <p>by <a href="#">sonTunqcute</a></p>
+                                <p>11-04-2022, 11:15</p>
+                                </div> </li>
+                        <li class="cl3">544</li>
+                        <li class="cl4">5,011</li>
+                    </ul>
+                </li>
+                </div> 
+            </ul>
+
+            <br>
+
+            <ul class="forum_status" id="forum_status_4">
+                <li>
+                    <ul class="forum header tab_4  cnt_stt">
+                        <li>Lập trình <i class="fa-solid fa-keyboard"></i></li>
+                        <li><i class="fa-solid fa-circle-minus" rel="4"></i></li>
+                    </ul>
+                </li>
+                <div class="content_table content_table_4">
+                <li>
+                    <ul class="forum column_content r1 ">
+                        <li class="cl0"><i class="fa-solid fa-message"></i></li>
+                        <li class="cl1">Các ngôn ngữ lập trình</li>
+                        <li class="cl2"><a href="#" title="Xem bài viết mới trong chủ đề 'Danh sách liên kết của các ngôn ngữ lập trình'">Danh sách liên kết của các ngôn ngữ lập trình</a>
+                            <div class="mini_note_2">    
+                                <p>by <a href="#">idsasd</a></p>
+                                <p>13-03-2022, 13:31</p>
+                                </div> </li>
+                        <li class="cl3">54</li>
+                        <li class="cl4">1,384</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul class="forum column_content r2">
+                        <li class="cl0"><i class="fa-solid fa-message"></i></li>
+                        <li class="cl1">C++ Forum</li>
+                        <li class="cl2"><a href="#" title="Xem bài viết mới trong chủ đề 'Giới thiệu về C++'">Giới thiệu về C++</a>
+                            <div class="mini_note_2">    
+                                <p>by <a href="#">DinhNhat</a></p>
+                                <p>17-08-2022, 00:00</p>
+                                </div> </li>
+                        <li class="cl3">48 </li>
+                        <li class="cl4">1,013</li>
+                    </ul>
+                </li>
+                </div> 
+            </ul>
+
+            <br>
+
+            <ul class="forum_status" id="forum_status_5">
+                <li>
+                    <ul class="forum header tab_5 cnt_stt" id="statistic_heading">
+                        <li><i class="fa-solid fa-circle-info"></i> Thông tin diễn đàn</li>
+                    </ul>
+                </li>
+                <div class="content_table content_table_5">
+                <li>
+                    <ul class="forum column_content r1">
+                        <li id="graph"><i class="fa-solid fa-chart-simple"></i> Thống kê</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul id="statistic" class="forum column_content r2">
+                        <p >Chủ đề: <span id="topics">0</span>+</p>
+                        <p >Bài viết: <span id="articles">0</span>+</p>
+                        <p >Thành viên: <span id="members">0</span>+</p>
+                        <hr style="border-bottom: 1px solid #333 ;"></hr>
+                    </ul>
+                </li>
+                </div> 
+            </ul>
+
+
+        </div>
+
+
+        <!-- Thêm bài viết -->
+            <div id="add_stt">
+                <input type="button" value="Thêm 1 bài viết" id="add_btn">
+            </div>
+        
+        <div id="margin_item"></div>
+        <!-- up bài -->
+        <form action="" id="form">
+            <div class="form_group">
+                <label for="full_name" class="form_label">Phản hồi</label>
+                <input type="text" name="full_name" id="full_name" placeholder="Nhập chủ đề...">
+                <span class="form_messsage" id="err_msg_1">Vui lòng nhập trường này !!!</span>
+            </div>
+            <div class="form_group">
+                <label for="text_writting" class="form_label">Ý kiến phản hồi</label>
+                <textarea name="text_writting" id="text_writting" cols="40" rows="10" placeholder="Viết ý kiến ở đây..."></textarea>
+                <span class="form_messsage" id="err_msg_2">Vui lòng nhập trường này !!!</span>
+            </div>
+            <div class="form_group">
+                <input type="button" name="Send" value="Send" id="send"/>
+                <span class="form_messsage" id="err_msg_3">Vui lòng nhập các trường ở trên !!!</span>
+            </div>
+        </form>
+        <div id="margin_item"></div>
+
+        <!-- Hiện cái đăng kí thành công -->
+        <div class="modal">
+            <div class="modal_container">
+                <div class="modal_content">
+                    <p>Bạn đã up load thành công! Vui lòng chờ quản trị viên duyệt </p>
+                </div>
+                <div class="modal_close">
+                    <a class="fa-solid fa-check" href=""></a>
+                </div>
+            </div>
+        </div>
+
+        <div id="margin_item"></div>
+        <!-- Slide chuyển -->
+        <div id="intro_page">
+            <div class="intro_page_text">
+                <div class="intro_text" id="text_1">
+                    <h1>Diễn đàn CNTT</h1>
+                    <p>By: Nguyễn Thi Quý</p>
+                    <p>Since: 2022</p>
+                    <p>Cùng bạn phát triển</p>
+                </div>
+                <div class="intro_text" id="text_2">
+                    <p>Nhằm mục đích trao đổi kiến thức về CNTT, chúng tôi tạo ra 1 diễn đàn để trao đổi. Nơi mà mọi người có thể thoải mái đặt vấn đề và cùng nhau bàn luận về nó. Ý tưởng của bạn cũng chính là vấn đề của nhiều người khác. Hãy cùng nhau tạo nên 1 diễn đàn lành mạnh, ngày càng phát triển hơn !</p>
+                </div>
+                <div class="intro_text" id="text_3">
+                    <p>Để lại câu hỏi và mọi người sẽ cùng bàn luận về nó !</p>
+                </div>
+            </div>
+            <div class="circle_section">
+            <a href="#text_1" class="fa-solid fa-circle active_color" id="circle_1"></a>
+            <a href="#text_2" class="fa-solid fa-circle" id="circle_2"></a>
+            <a href="#text_3" class="fa-solid fa-circle" id="circle_3"></a>
+            </div>   
+        </div>
+
+        <div id="margin_item"></div>
+          <!-- Map -->
+          <div id="map">
+            <div class="map_section">
+               <div class="img_map_section">
+                <img src="map.jpg" alt="map">
+                <a href="" id="hn">Trụ sở Long An</a>
+                </div>
+                <div class="img_map_section">
+                    <img src="map.jpg" alt="map">
+                    <a href="" id="hcm">Trụ sở TP HCM</a>
+                </div>
+                <div class="img_map_section">
+                    <img src="map.jpg" alt="map">
+                    <a href="" id="hp">Trụ sở Hải Phòng</a>
+                </div>
+                <div class="img_map_section">
+                    <img src="map.jpg" alt="map">
+                    <a href="" id="dn">Trụ sở Đà Nẵng</a>
+                </div>
+            </div>
+            <div>
+
+            </div>
+          </div>
+          <div id="margin_item"></div>
+        <!-- Footer -->
+        <footer id="foot">
+            <div id="pad">
+              <div>
+                <ul class="list_footer">
+                  <li>
+                    <h4>Thông tin liên hệ</h4>
+                  </li>
+                  <li>
+                    <p>
+                      <i class="fa-solid fa-location-dot"></i> Số nhà 13 ngõ 259/9
+                      phố vọng, Đồng tâm, Hai Bà Trưng, Hà Nội
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      <i class="fa-solid fa-envelope"></i> Email:
+                      Support@tinhoc123.net
+                    </p>
+                  </li>
+                  <li>
+                    <p><i class="fa-solid fa-phone"></i> Tel: 02436628077</p>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <ul class="list_footer">
+                  <li>
+                    <h4>Giấy phép & Dịch vụ</h4>
+                  </li>
+                  <li>
+                    <p>
+                      Giấy phép ĐKKD Số: 0102852740 cấp bởi Sở Kế hoạch và Đầu tư Hà
+                      Nội.
+                    </p>
+                  </li>
+                  <li>
+                    <p>
+                      Giấy phép cung cấp dịch vụ mạng xã hội học Tin Học trực tuyến
+                      Số: 520/GP-BTTTT cấp bởi Bộ Thông tin & Truyền thông.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <ul class="list_footer list_boss">
+                  <li><h4>Thành lập năm 2022</h4></li>
+                  <li><span><i class="fa-solid fa-user icon_foot"></i> <p>Nguyễn Thi Quý</p></span></li>
+                  <li><span><i class="fa-solid fa-user icon_foot"></i> <p>Đỗ Đình Nhật</p></span></li>
+                </ul>
+              </div>
+            </div>
+          </footer>
+        
+          
+          
+    </body>
+</html>
