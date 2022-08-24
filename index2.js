@@ -74,7 +74,7 @@ $(".header ").on("click",".fa-circle-minus",function(){
 $(".menu_header li a#forum_btn ").click(function()
 {
   $("html,body").animate({
-    scrollTop:1380
+    scrollTop:1410
   },750)
 })
 $(".menu_header li a#branch_btn ").click(function()
